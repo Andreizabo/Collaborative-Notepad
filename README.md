@@ -227,7 +227,7 @@ Clients:
     Session. The Session will send a signal to the Server, and remove
     the Client's data from its arrays.
 
-![Other commands that can be issued by the Client](images/Diagram 5.png){#ComSeC2}
+![Other commands that can be issued by the Client](images/Diagram_5.png){#ComSeC2}
 
 # Conclusions
 

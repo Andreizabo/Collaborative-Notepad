@@ -69,9 +69,7 @@ communication with that Client.
 All messages sent throughout the program will have the following
 structure, as to assure consistency:
 
-::: {.center}
 *[PORT][SIZE][MESSAGE]*
-:::
 
 Where *PORT* is the port of the sender, *SIZE* is the size of the
 message sent and *MESSAGE* is an array of bytes of size *SIZE*. When

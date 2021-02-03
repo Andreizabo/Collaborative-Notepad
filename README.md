@@ -70,11 +70,11 @@ All messages sent throughout the program will have the following
 structure, as to assure consistency:
 
 ::: {.center}
-$[PORT][SIZE][MESSAGE]$
+*[PORT][SIZE][MESSAGE]*
 :::
 
-Where $PORT$ is the port of the sender, $SIZE$ is the size of the
-message sent and $MESSAGE$ is an array of bytes of size $SIZE$. When
+Where *PORT* is the port of the sender, *SIZE* is the size of the
+message sent and *MESSAGE* is an array of bytes of size *SIZE*. When
 reading a message the following steps will be followed:
 
 1.  Read an integer value, representing the port of the sender.
@@ -85,11 +85,11 @@ reading a message the following steps will be followed:
 3.  Read an array of bytes equal to the size read. This will be the
     actual message.
 
-The Server will always use the port $49200$. The range of ports assigned
-to the Session will be $49201-49300$. Therefore, a maximum of 100
+The Server will always use the port *49200*. The range of ports assigned
+to the Session will be *49201-49300*. Therefore, a maximum of 100
 Sessions will be able to exist at one time.
 
-![Threads and Communication](images/Diagram 6.png){#threads}
+![Threads and Communication](images/Diagram_6.png)
 
 # Program architecture
 
@@ -98,7 +98,7 @@ which will communicate using a certain protocol.
 
 ## Core parts
 
-![Project architecture: Core parts](images/Diagram 1.png){#Core Parts}
+![Project architecture: Core parts](images/Diagram_1.png)
 
 ## The Server 
 
@@ -147,7 +147,7 @@ the Client.
 
 ## Communication between Client and Server
 
-![Communication between Client and Server](images/Diagram 2.png){#ComCS}
+![Communication between Client and Server](images/Diagram_2.png)
 
 All the communication that is going to take place between the Client and
 the Server will start from the former, the latter only responding
@@ -175,7 +175,7 @@ accordingly. The Client can do the following:
 
 ## Communication between Server and Session 
 
-![Communication between Server and Session](images/Diagram 3.png){#ComSSe}
+![Communication between Server and Session](images/Diagram_3.png)
 
 The communication between the Server and any Session is limited, and
 there are only two cases in which it will happen:
@@ -189,7 +189,7 @@ there are only two cases in which it will happen:
 
 ## Communication between Session and Client 
 
-![Communication between Session and Client](images/Diagram 4.png){#ComSeC1}
+![Communication between Session and Client](images/Diagram_4.png)
 
 Most of the communication that will happen will be between the Session
 and the Client. It will be done through the use of the Session port and
@@ -227,7 +227,7 @@ Clients:
     Session. The Session will send a signal to the Server, and remove
     the Client's data from its arrays.
 
-![Other commands that can be issued by the Client](images/Diagram_5.png){#ComSeC2}
+![Other commands that can be issued by the Client](images/Diagram_5.png)
 
 # Conclusions
 
@@ -249,11 +249,9 @@ methods, **backspace** and **delete** and the use of arrows or the mouse
 to navigate. The user also has the option to save a file, it being saved
 as \"Saved-UserID-initialFileName\".
 
-![UI - Session list](images/1.png){#UISL}
+![UI - Session list](images/1.png) | ![UI - Session list](images/3.png)
 
-![UI - Session list](images/3.png){#UISL}
-
-![UI - Editor and Options](images/2.png){#UIEO}
+![UI - Editor and Options](images/2.png)
 
 ## Bugs and Glitches
 

@@ -1,9 +1,3 @@
----
-author:
-- Andrei Zaborilă 2B5
-title: Collaborative Notepad
----
-
 # Introduction
 
 Collaborative Notepad is a program that allows two users to edit a text
@@ -106,7 +100,7 @@ which will communicate using a certain protocol.
 
 ![Project architecture: Core parts](Diagram 1.png){#Core Parts}
 
-## The Server {#the-server .unnumbered}
+## The Server 
 
 The Server is the most important part of this program. It goes through
 two stages throughout its lifetime. First it will start, initializing
@@ -118,7 +112,7 @@ open Session. This will also store each Client connected to a certain
 Session, and other information about that Session, such as the name of
 the file that is being edited.
 
-## The Session {#the-session .unnumbered}
+## The Session 
 
 Sessions are sub-parts of the Server. When a Client wants to edit a
 document, they need to create a Session or join an existing one. They
@@ -135,7 +129,7 @@ will make use of the following:
 3.  The **array of Clients**. This array will store the clients assigned
     to the current Session.
 
-## The Client {#the-client .unnumbered}
+## The Client 
 
 The Client is the part of the program used by the user. It will allow
 editing text through simple means such as **writing** or **erasing** or
@@ -151,7 +145,7 @@ During execution, communication can occur between the Client and the
 Server, between the Server and the Session or between the Session and
 the Client.
 
-## Communication between Client and Server {#communication-between-client-and-server .unnumbered}
+## Communication between Client and Server
 
 ![Communication between Client and Server](Diagram 2.png){#ComCS}
 
@@ -179,7 +173,7 @@ accordingly. The Client can do the following:
 4.  **Disconnect**. The user will leave the program and the Client ID of
     their Client will become once again free for the taking.
 
-## Communication between Server and Session {#communication-between-server-and-session .unnumbered}
+## Communication between Server and Session 
 
 ![Communication between Server and Session](Diagram 3.png){#ComSSe}
 
@@ -193,7 +187,7 @@ there are only two cases in which it will happen:
 2.  A Client connected to the Session disconnected. The Server will
     unlink that Client from the Session.
 
-## Communication between Session and Client {#communication-between-session-and-client .unnumbered}
+## Communication between Session and Client 
 
 ![Communication between Session and Client](Diagram 4.png){#ComSeC1}
 
@@ -318,8 +312,7 @@ Besides these improvements, the speed and reliability of the whole
 program could be improved in some aspects with small modifications, thus
 further decreasing the desynchronization chances.
 
-::: {.thebibliography}
-9
+## Bibliography
 
 Project information\
 Information about the Collaborative Notepad project.
